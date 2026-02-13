@@ -1,3 +1,4 @@
+#Mini RPA project
 1.	Problem: 반복 문서 정리/기록 업무
 2.	Workflow: input → parse → rename/classify → log → archive
 3.	Error handling: needs-review 폴더, 로그, 재시도
