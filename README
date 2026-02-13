@@ -1,0 +1,5 @@
+1.	Problem: 반복 문서 정리/기록 업무
+2.	Workflow: input → parse → rename/classify → log → archive
+3.	Error handling: needs-review 폴더, 로그, 재시도
+4.	How to run: node src/index.js
+5.	Sample output: CSV 스크린샷/예시
