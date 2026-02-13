@@ -1,0 +1,14 @@
+timestamp,originalFile,newFile,vendor,invoiceNo,invoiceDate,total,status,note
+2026-02-13T16:14:44.191Z,SamsungSDS_20260213_invoice.pdf,2026-02-13_SamsungSDS_no-invoice-no.pdf,SamsungSDS,,,,needs-review,Parse error: pdf is not a function
+2026-02-13T16:19:31.249Z,SamsungSDS_20260213_invoice.pdf,2026-02-13_SamsungSDS_no-invoice-no.pdf,SamsungSDS,,,,needs-review,Parse error: pdfParse is not a function
+2026-02-13T16:23:42.068Z,SamsungSDS_20260213_invoice.pdf,2026-02-13_SamsungSDS_no-invoice-no.pdf,SamsungSDS,,,,needs-review,"Parse error: Please provide binary data as `Uint8Array`, rather than `Buffer`."
+2026-02-13T16:25:05.668Z,SamsungSDS_20260213_invoice.pdf,2026-02-13_SamsungSDS_no-invoice-no.pdf,SamsungSDS,,,,needs-review,"Parse error: Please provide binary data as `Uint8Array`, rather than `Buffer`."
+2026-02-13T16:26:16.225Z,SamsungSDS_20260213_invoice.pdf,2026-02-13_SamsungSDS_no-invoice-no.pdf,SamsungSDS,,2026-02-13,44.99,success,
+2026-02-13T16:27:37.224Z,bootcamp_cert_bryan.pdf,unknown-date_bootcamp_no-invoice-no.pdf,bootcamp,,,,needs-review,"Missing: invoiceDate, total, invoiceNo"
+2026-02-13T16:29:38.990Z,bootcamp_cert_bryan.pdf,unknown-date_bootcamp_no-invoice-no.pdf,bootcamp,,,,needs-review,"Missing: invoiceDate, total, invoiceNo"
+2026-02-13T16:30:01.578Z,bootcamp_cert_bryan.pdf,unknown-bootcamp_cert_bryan.pdf,bootcamp,,,,needs-review,"Missing: invoiceDate, total, invoiceNo"
+2026-02-13T16:30:22.443Z,SamsungSDS_20260213_invoice.pdf,2026-02-13_SamsungSDS_no-invoice-no.pdf,SamsungSDS,,2026-02-13,44.99,success,
+2026-02-13T16:32:35.090Z,SamsungSDS_20260213_invoice.pdf,2026-02-13_SamsungSDS_no-invoice-no.pdf,SamsungSDS,,2026-02-13,44.99,success,
+2026-02-13T16:33:01.291Z,SamsungSDS_20260213_invoice.pdf,2026-02-13_SamsungSDS.pdf,SamsungSDS,,2026-02-13,44.99,success,
+2026-02-13T16:33:49.785Z,2026-02-13_SamsungSDS_INV-102938.pdf,unknown-2026-02-13_SamsungSDS_INV-102938.pdf,2026-02-13,,,44.99,needs-review,"Missing: invoiceDate, invoiceNo"
+2026-02-13T16:36:06.169Z,hello.pdf,unknown-hello.pdf,hello,,,,needs-review,Parse error: Invalid PDF structure.

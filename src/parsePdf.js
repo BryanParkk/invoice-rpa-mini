@@ -1,15 +1,32 @@
-import * as pdfParse from "pdf-parse";
-const pdf = pdfParse.default ?? pdfParse;
+import * as pdfjsLib from "pdfjs-dist/legacy/build/pdf.mjs";
 
 function pick(regex, text) {
   const m = text.match(regex);
   return m ? (m[2] || m[1] || "").trim() : "";
 }
 
-// 너무 빡세게 안 잡고, 실패하면 needs-review로 보내는 전략이에요
+async function extractTextFromPdf(buffer) {
+  // Buffer면 "Buffer가 아닌" Uint8Array 뷰로 강제 변환
+  const uint8 = Buffer.isBuffer(buffer)
+    ? new Uint8Array(buffer.buffer, buffer.byteOffset, buffer.byteLength)
+    : buffer;
+
+  const loadingTask = pdfjsLib.getDocument({ data: uint8 });
+  const doc = await loadingTask.promise;
+
+  let fullText = "";
+  for (let pageNum = 1; pageNum <= doc.numPages; pageNum++) {
+    const page = await doc.getPage(pageNum);
+    const content = await page.getTextContent();
+    const pageText = content.items.map((it) => it.str).join(" ");
+    fullText += pageText + " ";
+  }
+
+  return fullText.replace(/\s+/g, " ").trim();
+}
+
 export async function parseInvoiceFromPdf(buffer) {
-  const data = await pdf(buffer);
-  const text = (data.text || "").replace(/\s+/g, " ").trim();
+  const text = await extractTextFromPdf(buffer);
 
   const invoiceNo =
     pick(/Invoice\s*(?:Number|No\.?)\s*[:#]?\s*([A-Z0-9-]+)/i, text) ||
@@ -25,7 +42,6 @@ export async function parseInvoiceFromPdf(buffer) {
     text,
   );
 
-  // vendor는 PDF에서 잡기 어려우면 파일명 기반으로도 보완할 거라 여기선 optional
   const vendor = pick(/Vendor\s*[:]?[\s]*([A-Za-z0-9 &.,-]{2,})/i, text);
 
   return { invoiceNo, invoiceDate, total, vendor, rawText: text };

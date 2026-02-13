@@ -1,1 +1,34 @@
 [2026-02-13T16:05:46.914Z] Watching: ./input
+[2026-02-13T16:12:50.221Z] Watching: ./input
+[2026-02-13T16:14:44.189Z] Detected: SamsungSDS_20260213_invoice.pdf
+[2026-02-13T16:14:44.697Z] Moved: SamsungSDS_20260213_invoice.pdf -> processed/nedds-review/SamsungSDS/2026-02-13_SamsungSDS_no-invoice-no.pdf
+[2026-02-13T16:19:01.055Z] Watching: ./input
+[2026-02-13T16:19:31.248Z] Detected: SamsungSDS_20260213_invoice.pdf
+[2026-02-13T16:19:31.753Z] Moved: SamsungSDS_20260213_invoice.pdf -> processed/nedds-review/SamsungSDS/2026-02-13_SamsungSDS_no-invoice-no.pdf
+[2026-02-13T16:23:12.233Z] Watching: ./input
+[2026-02-13T16:23:42.067Z] Detected: SamsungSDS_20260213_invoice.pdf
+[2026-02-13T16:23:42.571Z] Moved: SamsungSDS_20260213_invoice.pdf -> processed/nedds-review/SamsungSDS/2026-02-13_SamsungSDS_no-invoice-no.pdf
+[2026-02-13T16:24:49.671Z] Watching: ./input
+[2026-02-13T16:25:05.666Z] Detected: SamsungSDS_20260213_invoice.pdf
+[2026-02-13T16:25:06.171Z] Moved: SamsungSDS_20260213_invoice.pdf -> processed/nedds-review/SamsungSDS/2026-02-13_SamsungSDS_no-invoice-no.pdf
+[2026-02-13T16:25:54.894Z] Watching: ./input
+[2026-02-13T16:26:16.224Z] Detected: SamsungSDS_20260213_invoice.pdf
+[2026-02-13T16:26:16.896Z] Moved: SamsungSDS_20260213_invoice.pdf -> processed/success/SamsungSDS/2026-02-13_SamsungSDS_no-invoice-no.pdf
+[2026-02-13T16:27:37.223Z] Detected: bootcamp_cert_bryan.pdf
+[2026-02-13T16:27:37.842Z] Moved: bootcamp_cert_bryan.pdf -> processed/nedds-review/bootcamp/unknown-date_bootcamp_no-invoice-no.pdf
+[2026-02-13T16:29:38.988Z] Detected: bootcamp_cert_bryan.pdf
+[2026-02-13T16:29:39.562Z] Moved: bootcamp_cert_bryan.pdf -> processed/nedds-review/bootcamp/unknown-date_bootcamp_no-invoice-no.pdf
+[2026-02-13T16:29:53.441Z] Watching: ./input
+[2026-02-13T16:30:01.577Z] Detected: bootcamp_cert_bryan.pdf
+[2026-02-13T16:30:02.219Z] Moved: bootcamp_cert_bryan.pdf -> processed/needs-review/bootcamp/unknown-bootcamp_cert_bryan.pdf
+[2026-02-13T16:30:22.442Z] Detected: SamsungSDS_20260213_invoice.pdf
+[2026-02-13T16:30:23.066Z] Moved: SamsungSDS_20260213_invoice.pdf -> processed/success/SamsungSDS/2026-02-13_SamsungSDS_no-invoice-no.pdf
+[2026-02-13T16:32:35.090Z] Detected: SamsungSDS_20260213_invoice.pdf
+[2026-02-13T16:32:35.699Z] Moved: SamsungSDS_20260213_invoice.pdf -> processed/success/SamsungSDS/2026-02-13_SamsungSDS_no-invoice-no.pdf
+[2026-02-13T16:32:50.302Z] Watching: ./input
+[2026-02-13T16:33:01.290Z] Detected: SamsungSDS_20260213_invoice.pdf
+[2026-02-13T16:33:01.962Z] Moved: SamsungSDS_20260213_invoice.pdf -> processed/success/SamsungSDS/2026-02-13_SamsungSDS.pdf
+[2026-02-13T16:33:49.783Z] Detected: 2026-02-13_SamsungSDS_INV-102938.pdf
+[2026-02-13T16:33:50.379Z] Moved: 2026-02-13_SamsungSDS_INV-102938.pdf -> processed/needs-review/2026-02-13/unknown-2026-02-13_SamsungSDS_INV-102938.pdf
+[2026-02-13T16:36:06.168Z] Detected: hello.pdf
+[2026-02-13T16:36:06.676Z] Moved: hello.pdf -> processed/needs-review/hello/unknown-hello.pdf
