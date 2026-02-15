@@ -103,22 +103,28 @@ async function handleFile(fullPath) {
     note = `Parse error: ${e?.message || e}`;
   }
 
-  // 3) 리네임 규칙: [date]_[vendor]_[invoiceNo or original].pdf
+  // 3) 리네임 규칙 (옵션 A):
+  // - 날짜 O + invoiceNo O: [date]_[vendor]_[invoiceNo].pdf
+  // - 날짜 O + invoiceNo X: [date]_[vendor].pdf
+  // - 날짜 X: unknown-[original].pdf
   const vendorPart = safeName(vendor || "UnknownVendor");
-  const invPart = safeName(invoiceNo || "no-invoice-no");
+  const datePart = safeName(invoiceDate || dateFromName); // hasDate일 때만 사용
 
   const hasDate = Boolean(invoiceDate || dateFromName);
 
-  // 날짜가 있으면: 기존처럼 [date]_[vendor]_[invoiceNo].pdf
-  // 날짜가 없으면: unknown-[원본파일명].pdf  (원본은 최대한 유지)
+  // 날짜가 없을 때는 원본 이름을 최대한 유지
   const originalBase = path.basename(originalFile, path.extname(originalFile));
   const originalSafe = safeName(originalBase);
 
-  const newFile = hasDate
-    ? invoiceNo
-      ? `${safeName(invoiceDate || dateFromName)}_${vendorPart}_${safeName(invoiceNo)}.pdf`
-      : `${safeName(invoiceDate || dateFromName)}_${vendorPart}.pdf`
-    : `unknown-${originalSafe}.pdf`;
+  let newFile;
+  if (!hasDate) {
+    newFile = `unknown-${originalSafe}.pdf`;
+  } else if (invoiceNo) {
+    newFile = `${datePart}_${vendorPart}_${safeName(invoiceNo)}.pdf`;
+  } else {
+    newFile = `${datePart}_${vendorPart}.pdf`;
+  }
+
   // 4) 이동 경로
   const destBase =
     status === "success"
